@@ -3,8 +3,11 @@ package com.jamesli.pojo;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.JsonNode;
 
+import java.util.List;
+
 public class Trade {
-    private Object c;   // List of trade conditions
+    @JsonProperty("c")
+    private List<String> c;   // List of trade conditions
 
     @JsonProperty("p")
     private double price;
@@ -18,9 +21,9 @@ public class Trade {
     @JsonProperty("v")
     private double volumne;
 
-    public Object getC() { return c;}
+    public List<String> getC() { return c;}
 
-    public void setC(Object c) {
+    public void setC(List<String> c) {
         this.c = c;
     }
 
