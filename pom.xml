@@ -15,13 +15,14 @@
 
         <!-- Define versions as properties for easier maintenance -->
         <kafka.version>3.9.0</kafka.version>
-        <flink.version>1.16.0</flink.version>
+        <flink.version>1.17.1</flink.version>
         <spark.version>3.5.0</spark.version>
         <jackson.version>2.18.2</jackson.version>
         <log4j.version>2.20.0</log4j.version>
         <okhttp.version>4.10.0</okhttp.version>
         <aws.version>1.12.529</aws.version>
     </properties>
+
 
     <dependencies>
         <!-- Kafka Dependencies -->
@@ -55,19 +56,11 @@
             <version>${flink.version}</version>
         </dependency>
 
-        <dependency>
-            <groupId>org.apache.flink</groupId>
-            <artifactId>flink-connector-filesystem_2.12</artifactId>
-            <version>1.7.2</version>
-        </dependency>
-
-
-
         <!-- Flink Dependencies -->
         <dependency>
             <groupId>org.apache.flink</groupId>
             <artifactId>flink-streaming-java_2.12</artifactId>
-            <version>${flink.version}</version>
+            <version>1.14.6</version>
         </dependency>
         <dependency>
             <groupId>org.apache.flink</groupId>
@@ -78,11 +71,6 @@
             <groupId>org.apache.flink</groupId>
             <artifactId>flink-core</artifactId>
             <version>${flink.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.flink</groupId>
-            <artifactId>flink-parquet_2.11</artifactId>
-            <version>1.14.0</version>
         </dependency>
         <dependency>
             <groupId>org.apache.flink</groupId>
@@ -98,7 +86,7 @@
         <dependency>
             <groupId>org.apache.flink</groupId>
             <artifactId>flink-connector-kafka_2.12</artifactId>
-            <version>1.7.1</version>
+            <version>1.9.0</version>
         </dependency>
 
         <!-- Flink Core -->
@@ -110,7 +98,12 @@
         <dependency>
             <groupId>org.apache.flink</groupId>
             <artifactId>flink-streaming-java_2.12</artifactId>
-            <version>1.7.1</version>
+            <version>1.14.6</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-json</artifactId>
+            <version>${flink.version}</version>
         </dependency>
 
         <!-- Spark Dependencies -->
@@ -144,11 +137,11 @@
             <scope>provided</scope>
         </dependency>
 
-        <!-- AWS SDK for Timestream Write -->
+        <!-- Flie Sink-->
         <dependency>
-            <groupId>software.amazon.awssdk</groupId>
-            <artifactId>timestreamwrite</artifactId>
-            <version>2.21.0</version> <!-- Use the latest version -->
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-connector-files</artifactId>
+            <version>${flink.version}</version>
         </dependency>
 
 

@@ -87,6 +87,7 @@ public class FinnhubWebSocketClient extends WebSocketClient {
     @Override
     public void onMessage(String message){
         lastMessageTime = System.currentTimeMillis();
+        System.out.println(message);
         log.debug("Received : {}", message);
 
         try {

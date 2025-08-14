@@ -21,6 +21,12 @@ public class Trade {
     @JsonProperty("v")
     private double volumne;
 
+    public Trade(String symbol, double price, long timestamp){
+        this.symbol = symbol;
+        this.price = price;
+        this.timestamp = timestamp;
+    }
+
     public List<String> getC() { return c;}
 
     public void setC(List<String> c) {

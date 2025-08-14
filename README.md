@@ -1,6 +1,6 @@
 ## 🌐 Real-Time Data Pipeline: WebSocket → Kafka → S3
 
-A scalable real-time data ingestion system that captures messages from WebSocket clients, streams them through Apache Kafka, and persistently stores them in Amazon S3 for analytics and archival.
+A scalable real-time data ingestion system that captures messages from WebSocket clients, streams them through Apache Kafka, and persistently stores them in Amazon S3 for further analytics and archival.
 
 ---
 
@@ -10,7 +10,8 @@ This project implements a robust real-time data pipeline:
 
 1. **WebSocket Client/Server**: Accepts live messages from clients.
 2. **Apache Kafka**: Acts as a high-throughput message broker.
-3. **Amazon S3**: Stores messages durably for batch processing, analytics, or ML workflows.
+3. **Apache Flink**: Acts as a High-Throughput Processing Engine
+4. **Amazon S3**: Stores messages durably for batch processing, analytics, or ML workflows.
 
 Ideal for use cases like live event tracking, IoT telemetry, log aggregation, and user activity monitoring.
 
